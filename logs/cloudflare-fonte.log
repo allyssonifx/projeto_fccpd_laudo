@@ -1,0 +1,18 @@
+# Registro de leitura do post-mortem oficial. Os dados abaixo são da fonte histórica.
+url=https://blog.cloudflare.com/18-november-2025-outage/
+autor=Matthew Prince
+data_incidente=2025-11-18
+fuso=UTC
+11:05 | The query behaviour change | A alteração de permissões do ClickHouse expõe também metadados das tabelas subjacentes.
+11:20 | Abertura e The outage | Começam falhas significativas e alta no volume de HTTP 5xx.
+11:28 | Tabela final, Time (UTC) | Primeiros erros observados no tráfego HTTP de clientes nessa cronologia.
+13:37 | Timeline | O trabalho passa a focar a volta a uma configuração válida anterior.
+14:24 | Timeline | A criação e a propagação automática são interrompidas e é concluído o teste com o arquivo anterior.
+14:30 | Timeline | O arquivo correto já foi implantado globalmente e o impacto principal é resolvido.
+17:06 | Timeline | Os serviços dependentes voltam e termina o impacto.
+Memory preallocation | limite_features=200 | uso_habitual_aproximado=60 | arquivo_com_falha_acima_de_200=true
+The outage | gráfico de volume de HTTP 5xx com picos e intervalos de melhora; percentual agregado de todas as requisições não publicado.
+The outage | geração a cada 5 min durante a atualização gradual; inserção manual de arquivo válido e reinício forçado do proxy.
+Referência adotada | 11:05 → 11:20 = 15 min (mudança de permissão → início de falhas, não o instante da publicação problemática).
+Referência adotada | 11:20 → 14:30 = 190 min (impacto principal).
+Referência adotada | 11:20 → 17:06 = 346 min (impacto total).

@@ -1,0 +1,4 @@
+{"utc": "2026-11-23T01:29:22.710+00:00", "evento": "proxy_iniciado", "modo": "base", "limite": 8, "consulta_s": 0.4}
+{"utc": "2026-11-23T01:29:22.748+00:00", "evento": "config_ativada", "versao": "valida", "features": 5, "limite": 8}
+{"utc": "2026-11-23T01:29:25.169+00:00", "evento": "limite_excedido", "versao": "duplicada", "features": 10, "limite": 8}
+{"utc": "2026-11-23T01:29:31.209+00:00", "evento": "config_ativada", "versao": "rollback", "features": 5, "limite": 8}

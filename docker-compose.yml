@@ -1,0 +1,38 @@
+name: escobar-sre
+
+x-python: &python
+  image: python:3.12-alpine
+  working_dir: /lab
+  volumes:
+    - ./lab:/lab:ro
+
+services:
+  publicador:
+    <<: *python
+    command: [python, -u, publicador.py]
+    networks: [config]
+
+  proxy:
+    <<: *python
+    command: [python, -u, proxy.py]
+    environment:
+      MODO: ${MODO:-base}
+    depends_on: [publicador]
+    networks:
+      config: {}
+      trafego:
+        aliases: [proxy-trafego]
+
+  sonda:
+    <<: *python
+    command: [python, -u, sonda.py]
+    environment:
+      PROXY: http://proxy-trafego:8000
+    depends_on: [proxy]
+    networks: [trafego, config]
+
+networks:
+  config:
+    internal: true
+  trafego:
+    internal: true

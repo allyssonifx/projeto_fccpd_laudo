@@ -1,0 +1,105 @@
+ Network escobar-sre-20680_trafego Creating 
+ Network escobar-sre-20680_trafego Creating 
+ Network escobar-sre-20680_config Creating 
+ Network escobar-sre-20680_config Creating 
+ Network escobar-sre-20680_config Created 
+ Network escobar-sre-20680_config Created 
+ Container escobar-sre-20680-publicador-1 Creating 
+ Network escobar-sre-20680_trafego Created 
+ Network escobar-sre-20680_trafego Created 
+ Container escobar-sre-20680-publicador-1 Created 
+ Container escobar-sre-20680-proxy-1 Creating 
+ Container escobar-sre-20680-proxy-1 Created 
+ Container escobar-sre-20680-sonda-1 Creating 
+ Container escobar-sre-20680-sonda-1 Created 
+Attaching to proxy-1, publicador-1, sonda-1
+ Container escobar-sre-20680-publicador-1 Starting 
+ Container escobar-sre-20680-publicador-1 Started 
+ Container escobar-sre-20680-proxy-1 Starting 
+ Container escobar-sre-20680-proxy-1 Started 
+ Container escobar-sre-20680-sonda-1 Starting 
+ Container escobar-sre-20680-sonda-1 Started 
+publicador-1  | {"utc": "2026-11-23T01:29:22.531+00:00", "evento": "publicacao", "versao": "valida", "features": 5}
+proxy-1       | {"utc": "2026-11-23T01:29:22.710+00:00", "evento": "proxy_iniciado", "modo": "base", "limite": 8, "consulta_s": 0.4}
+proxy-1       | {"utc": "2026-11-23T01:29:22.748+00:00", "evento": "config_ativada", "versao": "valida", "features": 5, "limite": 8}
+sonda-1       | {"utc": "2026-11-23T01:29:22.968+00:00", "evento": "inicio_amostragem", "intervalo_s": 0.2, "amostras": 60}
+sonda-1       | {"utc": "2026-11-23T01:29:22.976+00:00", "evento": "amostra", "n": 1, "t_s": 0.005328, "status": 200, "origem_status": 200, "versao": "valida", "latencia_ms": 5.311, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:23.173+00:00", "evento": "amostra", "n": 2, "t_s": 0.203612, "status": 200, "origem_status": 200, "versao": "valida", "latencia_ms": 3.419, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:23.373+00:00", "evento": "amostra", "n": 3, "t_s": 0.403609, "status": 200, "origem_status": 200, "versao": "valida", "latencia_ms": 3.421, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:23.573+00:00", "evento": "amostra", "n": 4, "t_s": 0.60348, "status": 200, "origem_status": 200, "versao": "valida", "latencia_ms": 3.326, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:23.782+00:00", "evento": "amostra", "n": 5, "t_s": 0.804907, "status": 200, "origem_status": 200, "versao": "valida", "latencia_ms": 4.748, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:23.973+00:00", "evento": "amostra", "n": 6, "t_s": 1.003519, "status": 200, "origem_status": 200, "versao": "valida", "latencia_ms": 3.345, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:24.180+00:00", "evento": "amostra", "n": 7, "t_s": 1.208277, "status": 200, "origem_status": 200, "versao": "valida", "latencia_ms": 7.756, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:24.380+00:00", "evento": "amostra", "n": 8, "t_s": 1.408534, "status": 200, "origem_status": 200, "versao": "valida", "latencia_ms": 8.1, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:24.581+00:00", "evento": "amostra", "n": 9, "t_s": 1.608634, "status": 200, "origem_status": 200, "versao": "valida", "latencia_ms": 8.244, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:24.782+00:00", "evento": "amostra", "n": 10, "t_s": 1.81016, "status": 200, "origem_status": 200, "versao": "valida", "latencia_ms": 9.627, "detalhe": null}
+publicador-1  | {"utc": "2026-11-23T01:29:24.971+00:00", "evento": "publicacao", "versao": "duplicada", "features": 10}
+sonda-1       | {"utc": "2026-11-23T01:29:24.973+00:00", "evento": "publicacao_confirmada", "t_s": 2.004833, "versao": "duplicada", "features": 10}
+sonda-1       | {"utc": "2026-11-23T01:29:24.986+00:00", "evento": "amostra", "n": 11, "t_s": 2.014607, "status": 200, "origem_status": 200, "versao": "valida", "latencia_ms": 9.469, "detalhe": null}
+proxy-1       | {"utc": "2026-11-23T01:29:25.169+00:00", "evento": "limite_excedido", "versao": "duplicada", "features": 10, "limite": 8}
+sonda-1       | {"utc": "2026-11-23T01:29:25.178+00:00", "evento": "amostra", "n": 12, "t_s": 2.204918, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.676, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:25.377+00:00", "evento": "amostra", "n": 13, "t_s": 2.404682, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.169, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:25.572+00:00", "evento": "amostra", "n": 14, "t_s": 2.602584, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 2.318, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:25.777+00:00", "evento": "amostra", "n": 15, "t_s": 2.804413, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 3.956, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:25.975+00:00", "evento": "amostra", "n": 16, "t_s": 3.003664, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 3.417, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:26.177+00:00", "evento": "amostra", "n": 17, "t_s": 3.204612, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.234, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:26.375+00:00", "evento": "amostra", "n": 18, "t_s": 3.403873, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 3.597, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:26.577+00:00", "evento": "amostra", "n": 19, "t_s": 3.604717, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.234, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:26.775+00:00", "evento": "amostra", "n": 20, "t_s": 3.803551, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 3.248, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:26.975+00:00", "evento": "amostra", "n": 21, "t_s": 4.00391, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 3.561, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:27.176+00:00", "evento": "amostra", "n": 22, "t_s": 4.203634, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 3.377, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:27.377+00:00", "evento": "amostra", "n": 23, "t_s": 4.404678, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.351, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:27.577+00:00", "evento": "amostra", "n": 24, "t_s": 4.604997, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.599, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:27.779+00:00", "evento": "amostra", "n": 25, "t_s": 4.805427, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 5.119, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:27.977+00:00", "evento": "amostra", "n": 26, "t_s": 5.004701, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.213, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:28.177+00:00", "evento": "amostra", "n": 27, "t_s": 5.204936, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.428, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:28.373+00:00", "evento": "amostra", "n": 28, "t_s": 5.402835, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 2.615, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:28.577+00:00", "evento": "amostra", "n": 29, "t_s": 5.604432, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.044, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:28.778+00:00", "evento": "amostra", "n": 30, "t_s": 5.804828, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.429, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:28.976+00:00", "evento": "amostra", "n": 31, "t_s": 6.00435, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 3.88, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:29.176+00:00", "evento": "amostra", "n": 32, "t_s": 6.204365, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 3.899, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:29.373+00:00", "evento": "amostra", "n": 33, "t_s": 6.402865, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 2.468, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:29.577+00:00", "evento": "amostra", "n": 34, "t_s": 6.604541, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.214, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:29.775+00:00", "evento": "amostra", "n": 35, "t_s": 6.803921, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 3.492, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:29.978+00:00", "evento": "amostra", "n": 36, "t_s": 7.004815, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.322, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:30.177+00:00", "evento": "amostra", "n": 37, "t_s": 7.204492, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.194, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:30.377+00:00", "evento": "amostra", "n": 38, "t_s": 7.404607, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.109, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:30.572+00:00", "evento": "amostra", "n": 39, "t_s": 7.602254, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 1.976, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:30.778+00:00", "evento": "amostra", "n": 40, "t_s": 7.805007, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 4.506, "detalhe": "limite excedido"}
+publicador-1  | {"utc": "2026-11-23T01:29:30.972+00:00", "evento": "publicacao", "versao": "rollback", "features": 5}
+sonda-1       | {"utc": "2026-11-23T01:29:30.973+00:00", "evento": "publicacao_confirmada", "t_s": 8.005019, "versao": "rollback", "features": 5}
+sonda-1       | {"utc": "2026-11-23T01:29:30.986+00:00", "evento": "amostra", "n": 41, "t_s": 8.01242, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 6.876, "detalhe": "limite excedido"}
+sonda-1       | {"utc": "2026-11-23T01:29:31.172+00:00", "evento": "amostra", "n": 42, "t_s": 8.20243, "status": 500, "origem_status": 200, "versao": "duplicada", "latencia_ms": 2.106, "detalhe": "limite excedido"}
+proxy-1       | {"utc": "2026-11-23T01:29:31.209+00:00", "evento": "config_ativada", "versao": "rollback", "features": 5, "limite": 8}
+sonda-1       | {"utc": "2026-11-23T01:29:31.381+00:00", "evento": "amostra", "n": 43, "t_s": 8.40946, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 9.18, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:31.575+00:00", "evento": "amostra", "n": 44, "t_s": 8.604251, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 4.095, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:31.774+00:00", "evento": "amostra", "n": 45, "t_s": 8.803996, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 3.816, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:31.973+00:00", "evento": "amostra", "n": 46, "t_s": 9.003577, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 3.444, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:32.182+00:00", "evento": "amostra", "n": 47, "t_s": 9.209734, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 9.349, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:32.382+00:00", "evento": "amostra", "n": 48, "t_s": 9.409373, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 8.862, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:32.580+00:00", "evento": "amostra", "n": 49, "t_s": 9.608633, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 8.262, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:32.774+00:00", "evento": "amostra", "n": 50, "t_s": 9.804379, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 4.024, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:32.982+00:00", "evento": "amostra", "n": 51, "t_s": 10.009344, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 8.85, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:33.182+00:00", "evento": "amostra", "n": 52, "t_s": 10.209736, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 9.261, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:33.380+00:00", "evento": "amostra", "n": 53, "t_s": 10.40835, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 7.901, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:33.582+00:00", "evento": "amostra", "n": 54, "t_s": 10.609312, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 8.798, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:33.776+00:00", "evento": "amostra", "n": 55, "t_s": 10.805188, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 4.799, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:33.973+00:00", "evento": "amostra", "n": 56, "t_s": 11.003337, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 3.125, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:34.181+00:00", "evento": "amostra", "n": 57, "t_s": 11.208563, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 8.106, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:34.381+00:00", "evento": "amostra", "n": 58, "t_s": 11.409045, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 8.718, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:34.582+00:00", "evento": "amostra", "n": 59, "t_s": 11.609581, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 9.05, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:34.782+00:00", "evento": "amostra", "n": 60, "t_s": 11.809293, "status": 200, "origem_status": 200, "versao": "rollback", "latencia_ms": 8.786, "detalhe": null}
+sonda-1       | {"utc": "2026-11-23T01:29:34.968+00:00", "evento": "fim_amostragem"}
+
+[Ksonda-1 exited with code 0
+ Compose Stopping Aborting on container exit...
+ Container escobar-sre-20680-sonda-1 Stopping 
+ Container escobar-sre-20680-sonda-1 Stopped 
+ Container escobar-sre-20680-proxy-1 Stopping 
+ Container escobar-sre-20680-proxy-1 Stopped 
+
+[Kproxy-1 exited with code 137
+ Container escobar-sre-20680-publicador-1 Stopping 
+ Container escobar-sre-20680-publicador-1 Stopped 
+
+[Kpublicador-1 exited with code 137
