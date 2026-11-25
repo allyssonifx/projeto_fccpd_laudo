@@ -16,7 +16,14 @@ docker compose config --quiet
 pwsh -File ./rodar.ps1
 ```
 
-O script roda os modos base e mitigado em sequência, encerra cada rodada quando a sonda termina, coleta a saída e remove os contêineres. Por padrão usa `tmp/reproducao`. Para repetir, informe uma pasta vazia com `-Destino tmp/reproducao-2`. Se `pwsh` estiver fora do PATH, abra o script pelo caminho completo do executável do PowerShell 7. O modo Bash está abaixo.
+O script roda os modos base e mitigado em sequência, encerra cada rodada quando a sonda termina, coleta a saída e remove os contêineres. Por padrão usa `tmp/reproducao`. Para repetir, informe uma pasta vazia com `-Destino tmp/reproducao-2`.
+
+Se o PowerShell 7 estiver instalado e `pwsh` estiver fora do PATH, execute o script pelo caminho completo. Este exemplo usa o caminho padrão da instalação MSI. Se o executável estiver em outra pasta, ajuste `$pwshExecutavel`.
+
+```powershell
+$pwshExecutavel = Join-Path $env:ProgramFiles 'PowerShell\7\pwsh.exe'
+& $pwshExecutavel -NoProfile -File .\rodar.ps1 -Destino tmp/reproducao
+```
 
 Use `python lab/resumir.py logs/rodada-grupo` para recalcular os números do laudo a partir dos logs do grupo. A pasta `logs/execucao` contém a validação anterior do Codex.
 

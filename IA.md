@@ -16,6 +16,14 @@ As citações são trechos de quatro mensagens distintas enviadas ao Codex. As d
 ## Erros da IA verificados pelo grupo
 
 1. **Comando de execução incompatível com o terminal usado.** Ao seguir a instrução do Codex, o grupo recebeu `CommandNotFoundException` porque `pwsh` estava fora do `PATH`. A correção foi chamar o executável do PowerShell 7 pelo caminho completo. Os logs em `logs/rodada-grupo/` registram a conclusão dos dois cenários após a correção.
+
+   Trecho da tentativa original relatada pelo grupo:
+
+   ```text
+   pwsh -File ./rodar.ps1 -Destino logs/rodada-grupo
+   FullyQualifiedErrorId : CommandNotFoundException
+   ```
+
 2. **A configuração original deixava indefinida a rede de acesso ao proxy.** O diagrama produzido pelo Codex indicava `trafego`, mas a sonda usava o nome genérico `proxy`, e os dois serviços compartilhavam também a rede `config`. O Codex definiu `PROXY=http://proxy-trafego:8000` para a sonda em `docker-compose.yml` e registrou o alias exclusivamente em `trafego`. O grupo executou o teste de comparação das duas configurações resolvidas com `docker compose config` e reportou a saída abaixo. As métricas do laudo vieram da rodada do grupo.
 
 ```text
